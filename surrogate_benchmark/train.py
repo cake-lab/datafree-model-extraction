@@ -28,7 +28,7 @@ def lr_scheduler(args):
         lr_schedule = lambda t: step_lr(args.lr_max, t, args.epochs)
     return lr_schedule
 
-def epoch(args, loader, model, teacher = None, lr_schedule = None, epoch_i = None, opt=None):
+def epoch(args, loader, model, teacher = None, lr_schedule = None, epoch_i = None, opt=None, stop=False):
     """Extraction epoch over the dataset"""
 
     train_loss = 0
@@ -62,7 +62,7 @@ def epoch(args, loader, model, teacher = None, lr_schedule = None, epoch_i = Non
         train_acc += (yp.max(1)[1] == y).sum().item()
         train_n += y.size(0)
         i += 1
-        if train_n >= 50_000:
+        if train_n >= 50000:
             break
         
     return train_loss / train_n, train_acc / train_n
@@ -87,8 +87,8 @@ def epoch_test(args, loader, model, stop = False):
 epoch_adversarial = epoch
 
 def trainer(args):
-    train_loader, _ = data_loader(args.surrogate, args.batch_size,50_000)
-    _, test_loader = data_loader(args.target, args.batch_size,50_000)
+    train_loader, _ = data_loader(args.surrogate, args.batch_size,50000)
+    _, test_loader = data_loader(args.target, args.batch_size,50000)
 
     def myprint(a):
         print(a); file.write(a); file.write("\n"); file.flush()
@@ -151,9 +151,11 @@ if __name__ == "__main__":
     assert (target in targets_list)
     assert (surrogate in surrogates_list[target])
 
-    device = torch.device("cuda:{0}".format(args.gpu_id) if torch.cuda.is_available() else "cpu")
+    device = torch.device(f"cuda:{args.device}" if torch.cuda.is_available() else "cpu")
     root = f"../models/{args.target}"
     model_dir = f"{root}/model_{args.surrogate}/temp_{args.temp}_lr_mode_{args.lr_mode}"; print("Model Directory:", model_dir); args.model_dir = model_dir
+    args.model_dir = model_dir
+
     if(not os.path.exists(model_dir)):
         os.makedirs(model_dir)
        

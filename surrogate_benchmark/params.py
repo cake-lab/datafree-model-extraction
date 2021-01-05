@@ -16,7 +16,7 @@ def parse_args():
     parser.add_argument("--model_id", help = "For Saving", type = str, default = '0')
     parser.add_argument("--seed", help = "Seed", type = int, default = 0)
     parser.add_argument("--normalize", help = "Normalize training data inside the model", type = int, default = 1, choices = [0,1])
-    parser.add_argument("--device", help = "To be assigned later", type = str, default = 'cuda:0')
+    parser.add_argument("--device", help = "To be assigned later", type = int, default = 0)
     parser.add_argument("--epochs", help = "Number of Epochs", type = int, default = 50)
     
     #LR
