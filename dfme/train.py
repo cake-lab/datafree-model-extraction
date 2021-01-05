@@ -186,7 +186,7 @@ def main():
     parser.add_argument('--d_iter', type=int, default=5, help = "Number of discriminator iterations per epoch_iter")
 
     parser.add_argument('--lr_S', type=float, default=0.1, metavar='LR', help='Student learning rate (default: 0.1)')
-    parser.add_argument('--lr_G', type=float, default=1e-4, help='Generator learning rate (default: 0.1)')
+    parser.add_argument('--lr_G', type=float, default=5e-4, help='Generator learning rate (default: 0.1)')
     parser.add_argument('--nz', type=int, default=256, help = "Size of random noise input to generator")
 
     parser.add_argument('--log_interval', type=int, default=10, metavar='N', help='how many batches to wait before logging training status')
