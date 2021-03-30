@@ -35,6 +35,16 @@ python train.py --surrogate {surrogate_dataset} --target {target_dataset} --temp
 ```
 Typically, using `temperature_value` in {1,3,5} provides good extraction results. The number of epochs may be reduced to 30 in case the `target` dataset is `svhn`.
 
+## Citation
+```
+@InProceedings{Truong_2020_CVPR,
+author = {Truong, Jean-Baptiste and Maini, Pratyush and Walls, Robert J. and Papernot, Nicolas},
+title = {Data-Free Model Extraction},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2021}
+}
+```
 
 ## Attribution
 
