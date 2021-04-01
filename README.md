@@ -37,7 +37,7 @@ Typically, using `temperature_value` in {1,3,5} provides good extraction results
 
 ## Citation
 ```
-@InProceedings{Truong_2020_CVPR,
+@InProceedings{Truong_2021_CVPR,
 author = {Truong, Jean-Baptiste and Maini, Pratyush and Walls, Robert J. and Papernot, Nicolas},
 title = {Data-Free Model Extraction},
 booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
