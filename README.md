@@ -1,6 +1,20 @@
 # Data-Free Model Extraction
 
-This folder contains all the code required to replicate the results described in the paper.
+This repository complements the [Data-Free Model Extraction paper](https://arxiv.org/abs/2011.14779), that will be published at the 2021 IEEE/CVF Conference on Computer Vision and Pattern Recognition.
+
+This project was conducted in collaboration between the [Cake Lab](https://cake.wpi.edu/) at Worcester Polytechnic Institute, and the [University of Toronto](https://www.utoronto.ca/) and the [Vector Institute](https://vectorinstitute.ai/).
+
+
+## Citation
+```
+@InProceedings{Truong_2021_CVPR,
+author = {Truong, Jean-Baptiste and Maini, Pratyush and Walls, Robert J. and Papernot, Nicolas},
+title = {Data-Free Model Extraction},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2021}
+}
+```
 
 ## Dependencies
 The code requires dependencies that can be installed using the `pip` environment file provided:
@@ -35,16 +49,7 @@ python train.py --surrogate {surrogate_dataset} --target {target_dataset} --temp
 ```
 Typically, using `temperature_value` in {1,3,5} provides good extraction results. The number of epochs may be reduced to 30 in case the `target` dataset is `svhn`.
 
-## Citation
-```
-@InProceedings{Truong_2021_CVPR,
-author = {Truong, Jean-Baptiste and Maini, Pratyush and Walls, Robert J. and Papernot, Nicolas},
-title = {Data-Free Model Extraction},
-booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-month = {June},
-year = {2021}
-}
-```
+
 
 ## Attribution
 
