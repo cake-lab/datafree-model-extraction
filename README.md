@@ -25,7 +25,7 @@ pip install -r requirements.txt
 ## Replicating DFME Results
 
 ### Load Victim Model Weights
-First, download the pretrained victim model weights from [the Data Free Adversarial Distillation paper's dropbox](https://www.dropbox.com/sh/xh9eqq0iknagwwc/AACTQGte7hecIcr-DexD7z9ea?dl=0). The two file names are `cifar10-resnet34_8x.pt` and `svhn-resnet34_8x.pt`.
+First, download the pretrained victim model weights from [this dropbox](https://www.dropbox.com/sh/lt6w0nq3msp4do0/AADmJk2k3LQqFqWt9916W-nra?dl=0). The two file names are `cifar10-resnet34_8x.pt` and `svhn-resnet34_8x.pt`. The CIFAR10 weights were found on the [Data Free Adversarial Distillation](https://github.com/VainF/Data-Free-Adversarial-Distillation) dropbox, while we trained the SVHN model ourselves.
 
 Then, store the pre-trained model weights at the following location
 
