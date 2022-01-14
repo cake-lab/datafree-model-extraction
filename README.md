@@ -5,6 +5,9 @@ This repository complements the [Data-Free Model Extraction paper](https://arxiv
 This project was conducted in collaboration between the [Cake Lab](https://cake.wpi.edu/) at Worcester Polytechnic Institute, and the [University of Toronto](https://www.utoronto.ca/) and the [Vector Institute](https://vectorinstitute.ai/).
 
 
+## Updates
+- Jan 14, 2022: Updated the default learning rate parameter for the generator to match the paper's experimental setup. 
+
 ## Citation
 ```
 @InProceedings{Truong_2021_CVPR,
